@@ -22,12 +22,12 @@
 <pre>
 
 	// HTML
-	<div class="carousel">
-		<div class="slide" data-src="images/vintage-grey-airplane-plane.jpg"></div>
-		<div class="slide" data-src="images/beach.jpg"></div>
-		<div class="slide" data-src="images/city.jpg"></div>
-		<div class="slide" data-src="images/road.jpg"></div>
-	</div>
+	&lt;div class="carousel"&gt;
+		&lt;div class="slide" data-src="images/vintage-grey-airplane-plane.jpg"&gt;&lt;/div&gt;
+		&lt;div class="slide" data-src="images/beach.jpg"&gt;&lt;/div&gt;
+		&lt;div class="slide" data-src="images/city.jpg"&gt;&lt;/div&gt;
+		&lt;div class="slide" data-src="images/road.jpg"&gt;&lt;/div&gt;
+	&lt;/div&gt;
 
 	// Javascript
 	$(".carousel").jfCarousel({
