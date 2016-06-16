@@ -82,6 +82,14 @@
 					self.timer.call(self);
 				});
 			}
+			// Fixed Aspect Ratio
+			if (this.fixedAspectRatio) {
+				if (this.originalImageWidth && this.originalImageHeight) {
+					this.aspectRatio = this.originalImageHeight/this.originalImageWidth;
+				} else {
+					alert("Please provide an original image height/width.");
+				}
+			}
 			// Adjust Carousel Dimentions
 			this.adjustDimentions();
 			TweenLite.to(this.$elem, 0.8, { autoAlpha: 1 });
@@ -114,19 +122,30 @@
 		adjustDimentions: function() {
 			var self = this;
 			this.loadMoreSlides();
-			if (this.fullScreen) {
+			if (this.fixedAspectRatio && this.aspectRatio) {
 				this.slides.css({
-					height: $(window).height(),
-					width: $(window).width()
+					width: this.$elem.outerWidth(),
+					height: this.$elem.outerWidth() * this.aspectRatio
 				});
-				this.$elem.height(this.slides.outerHeight());
-				this.slidesWidth = $(window).width();
-			} else if (this.slides.first().css("background")) {
-				this.slides.css({
-					width: this.$elem.outerWidth()
+				this.$elem.css({
+					height: this.$elem.outerWidth() * this.aspectRatio
 				});
-				this.$elem.height(this.slides.outerHeight());
 				this.slidesWidth = this.$elem.outerWidth();
+			} else {
+				if (this.fullScreen) {
+					this.slides.css({
+						height: $(window).height(),
+						width: $(window).width()
+					});
+					this.$elem.height(this.slides.outerHeight());
+					this.slidesWidth = $(window).width();
+				} else if (this.slides.first().css("background")) {
+					this.slides.css({
+						width: this.$elem.outerWidth()
+					});
+					this.$elem.height(this.slides.outerHeight());
+					this.slidesWidth = this.$elem.outerWidth();
+				}
 			}
 			if (this.slideAnimation === "slide") { this.slidesWrapper.height(this.slides.outerHeight()); }
 		},
@@ -268,6 +287,10 @@
 		pauseOnHover: true, // Pause auto animation one carousel hover
 		fullScreen: false, // Makes slides the same height/width as window
 		arrows: true, // Adds arrow control buttons
+
+		fixedAspectRatio: false, // Carousel retains aspect ratio
+		originalImageWidth: 1600, // Original width of image
+		originalImageHeight: 900, // Original height of image
 
 		pagination: false, // Slider has pagination
 		paginationType: 'icons', // 'icons', 'counter'
