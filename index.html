@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Example Carousel">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JF Carousel</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/jfCarousel.min.css">
+        <link rel="stylesheet" href="css/common.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    </head>
+    <body>
+        
+		<div class="carousel">
+			<div class="slide" data-src="images/vintage-grey-airplane-plane.jpg">
+				<div class="slide-content">
+					<div class="headline">
+						Slide 1
+					</div>
+					<div class="sub-headline">
+						This is the content for slide 1
+					</div>
+				</div>
+			</div>
+			<div class="slide" data-src="images/beach.jpg">
+				<div class="slide-content">
+					<div class="headline">
+						Slide 2
+					</div>
+					<div class="sub-headline">
+						This is the content for slide 2
+					</div>
+				</div>
+			</div>
+			<div class="slide" data-src="images/city.jpg">
+				<div class="slide-content">
+					<div class="headline">
+						Slide 3
+					</div>
+					<div class="sub-headline">
+						This is the content for slide 3
+					</div>
+				</div>
+			</div>
+			<div class="slide" data-src="images/road.jpg">
+				<div class="slide-content">
+					<div class="headline">
+						Slide 4
+					</div>
+					<div class="sub-headline">
+						This is the content for slide 4
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenLite.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/easing/EasePack.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/plugins/CSSPlugin.min.js"></script>
+        <script src="js/jfCarousel.min.js"></script>
+        <script>
+			(function($) {
+				$(".carousel").jfCarousel({
+					// slideAnimation: 'slide'
+				});
+			})(jQuery);
+        </script>
+    </body>
+</html>
