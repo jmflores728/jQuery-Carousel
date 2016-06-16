@@ -20,6 +20,16 @@
 <p>You can change all the default options using the code below.</p>
 
 <pre>
+
+	// HTML
+	<div class="carousel">
+		<div class="slide" data-src="images/vintage-grey-airplane-plane.jpg"></div>
+		<div class="slide" data-src="images/beach.jpg"></div>
+		<div class="slide" data-src="images/city.jpg"></div>
+		<div class="slide" data-src="images/road.jpg"></div>
+	</div>
+
+	// Javascript
 	$(".carousel").jfCarousel({
 		slideAnimation: "fade", // fade, slide
 		animationSpeed: 1000, // Animation transition speed
