@@ -1,8 +1,14 @@
 jfCarousel is a jQuery carousel.
 
 Library dependencies:
-	- jQuery
-	- GreenSock
-		- TweenLite
-		- EasePack
-		- CSSPlugin
+
+<ul>
+	<li>jQuery</li>
+	<li>GreenSock
+		<ul>
+			<li>TweenLite</li>
+			<li>EasePack</li>
+			<li>CSSPlugin</li>
+		</ul>
+	</li>
+</ul>
