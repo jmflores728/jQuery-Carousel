@@ -15,7 +15,9 @@
 	</li>
 </ul>
 
-<p>Plugin Initiation Example</p>
+<h3>Plugin Initialization Example</h3>
+
+<p>You can change all the default options using the code below.</p>
 
 <pre>
 	$(".carousel").jfCarousel({
