@@ -40,6 +40,10 @@
 		fullScreen: false, // Makes slides the same height/width as window
 		arrows: true, // Adds arrow control buttons
 
+		fixedAspectRatio: false, // Carousel retains aspect ratio
+		originalImageWidth: 1600, // Original width of image
+		originalImageHeight: 900, // Original height of image
+
 		pagination: false, // Slider has pagination
 		paginationType: 'icons', // 'icons', 'counter'
 		paginationDivider: ' / ', // Character that divides current slide and slide count. ex: 1 / 8
