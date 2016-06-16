@@ -17,7 +17,7 @@
 
 <p>Plugin Initiation Example</p>
 
-<code>
+<pre>
 	$(".carousel").jfCarousel({
 		slideAnimation: "fade", // fade, slide
 		animationSpeed: 1000, // Animation transition speed
@@ -39,10 +39,10 @@
 		lazyLoad: true, // Only load a few slides at a time
 		lazyLoadSlides: 1 // First number of slides to load before page load (including 1st slide)
 	});
-</code>
+</pre>
 
 <p>You can also just use all of the default options above by not passing in an object.</p>
 
-<code>
+<pre>
 	$(".carousel").jfCarousel();
-</code>
+</pre>
